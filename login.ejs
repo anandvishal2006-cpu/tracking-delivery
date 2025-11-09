@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header>
+    <h2><a href="/">ADVANCED LOGISTICS ANALYTICS PLATFORM</a></h2>
+    <nav>
+        <a href="/login">Log In</a>
+    </nav>
+  </header>  
+
+  <main>
+    <h3>Login Page</h3>
+    <p>WELCOME TO OUR TRACKING DELIVERY APP. HERE YOU CAN SEEK FOR WHERE YOUR DELIVERY PARTNER IS .WE ARE DETERMINED TO EASE THE TRAKING AND MAKE IT USER FRIENDLY. HOPING FOR A BETTER RESPONSE FROM YOUR SIDE..</p>
+
+  </main>
+    <h2>My Location Map</h2>
+
+  <!-- Put this inside your <body> -->
+  <div id="map" style="height: 400px; width: 100%;"></div>
+
+  <footer>
+    <small>&copy; ADVANCED LOGISTICS ANALYTICS PLATFORM</small>
+  </footer>
+
+
+<script>
+  var map = L.map('map').setView([20.5937, 78.9629], 5); // India's coordinates with zoom 5
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+  }).addTo(map);
+
+  L.marker([20.5937, 78.9629]).addTo(map)
+    .bindPopup('India Center')
+    .openPopup();
+</script>
+
+
+</body>
+</html>
